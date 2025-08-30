@@ -9,9 +9,7 @@ A modern **AWS Bedrock-based** Retrieval-Augmented Generation (RAG) web applicat
 ### 🎥 Demo Video
 Watch the application in action:
 
-https://github.com/user-attachments/assets/your-video-id
-
-*Note: The demo video is also available in the `architecture/` folder as `open-source-rag-chatbot-1756584527454.mp4`*
+https://github.com/user-attachments/assets/74743076-0cb1-4f2c-beb1-abc9fd3337f2
 
 This application leverages **AWS Bedrock** services to provide two distinct AI interaction modes:
 
