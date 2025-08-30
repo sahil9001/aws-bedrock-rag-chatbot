@@ -1,22 +1,24 @@
-# NextWork RAG Web Application
+# AWS Bedrock RAG Chatbot
 
-A modern **AWS Bedrock-based** Retrieval-Augmented Generation (RAG) web application that allows users to interact with a knowledge base about NextWork projects through an intelligent chatbot interface.
+A modern **AWS Bedrock-based** Retrieval-Augmented Generation (RAG) web application that provides an intelligent chatbot interface for querying documents and general AI conversations.
 
 ## 🏗️ Architecture Overview
 
+![Architecture Diagram](architecture/image.png)
+
 This application leverages **AWS Bedrock** services to provide two distinct AI interaction modes:
 
-- **Knowledge Base Mode**: Uses AWS Bedrock Knowledge Base with retrieval-augmented generation for project-specific queries
+- **Knowledge Base Mode**: Uses AWS Bedrock Knowledge Base with retrieval-augmented generation for document-specific queries
 - **Direct AI Mode**: Direct interaction with AWS Bedrock's Llama 3 model for general conversations
 
 ## 🚀 Key Features
 
 - **Dual AI Interaction Modes**
-  - Knowledge Base RAG: Query specific NextWork project documentation
+  - Knowledge Base RAG: Query specific document collections and knowledge bases
   - Direct AI Chat: General-purpose AI conversations using Llama 3
 - **Modern Web Interface**: Clean, responsive design with dark theme
 - **Real-time Chat**: Interactive chat interface with typing indicators
-- **Project Portfolio**: Visual showcase of NextWork projects
+- **Document Intelligence**: AI-powered document querying and analysis
 - **AWS Integration**: Full integration with AWS Bedrock services
 
 ## 🛠️ Technology Stack
@@ -98,11 +100,11 @@ The application will be available at `http://127.0.0.1:8000`
 ```
 GET /bedrock/query?text=your_question_here
 ```
-Queries the AWS Bedrock Knowledge Base for project-specific information.
+Queries the AWS Bedrock Knowledge Base for document-specific information.
 
 **Example:**
 ```
-http://127.0.0.1:8000/bedrock/query?text=what%20projects%20has%20the%20student%20done?
+http://127.0.0.1:8000/bedrock/query?text=what%20information%20is%20available%20in%20the%20documents?
 ```
 
 ### Direct Model Invocation
@@ -113,16 +115,18 @@ Directly invokes the Llama 3 model for general AI conversations.
 
 **Example:**
 ```
-http://127.0.0.1:8000/bedrock/invoke?text=who%20is%20madonna
+http://127.0.0.1:8000/bedrock/invoke?text=explain%20artificial%20intelligence
 ```
 
 ## 🏛️ Application Structure
 
 ```
-nextwork-rag-webapp/
+aws-bedrock-rag-webapp/
 ├── main.py              # Simple FastAPI app with knowledge base endpoint
 ├── web_app.py           # Full web application with UI
 ├── requirements.txt     # Python dependencies
+├── architecture/
+│   └── image.png       # Architecture diagram
 ├── templates/
 │   └── index.html      # Main web interface
 ├── static/
@@ -153,17 +157,17 @@ nextwork-rag-webapp/
 
 ## 🎯 Use Cases
 
-- **Student Portfolio**: Showcase NextWork project completions
-- **Interactive Documentation**: Query project documentation through natural language
-- **Learning Assistant**: Get help with specific project implementations
-- **General AI Chat**: Use for broader technical discussions
+- **Document Analysis**: Intelligent querying of document collections
+- **Interactive Documentation**: Query documentation through natural language
+- **Knowledge Management**: AI-powered information retrieval from knowledge bases
+- **General AI Chat**: Use for broader technical discussions and assistance
 
 ## 🔍 Features Deep Dive
 
 ### Knowledge Base RAG Mode
-- Retrieves relevant information from indexed NextWork project documentation
-- Provides context-aware responses based on actual project content
-- Ideal for specific questions about project implementations
+- Retrieves relevant information from indexed document collections
+- Provides context-aware responses based on actual document content
+- Ideal for specific questions about stored information and documentation
 
 ### Direct AI Mode
 - Direct access to Llama 3 model capabilities
@@ -171,8 +175,7 @@ nextwork-rag-webapp/
 - Useful for broader technical discussions and explanations
 
 ### Web Interface
-- **Project Grid**: Visual showcase of completed NextWork projects
-- **Chat Modal**: Floating chat interface with mode toggle
+- **Clean Chat Interface**: Streamlined chatbot interface with mode toggle
 - **Responsive Design**: Works on desktop and mobile devices
 - **Real-time Feedback**: Typing indicators and smooth interactions
 
@@ -201,13 +204,13 @@ The application is fully responsive and optimized for:
 
 ## 📄 License
 
-This project is part of the NextWork learning platform. Please refer to NextWork's terms of service for usage guidelines.
+This project is open source. Please refer to the license file for usage guidelines.
 
 ## 🔗 Related Links
 
-- [NextWork Learning Platform](https://learn.nextwork.org)
 - [AWS Bedrock Documentation](https://docs.aws.amazon.com/bedrock/)
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
+- [Boto3 Documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
 
 ---
 

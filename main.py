@@ -39,4 +39,5 @@ async def query_bedrock(text: str = Query(..., description="Input text for the m
         )
         return {"response": response["output"]["text"]}
     except Exception as e:
+        print(e)
         raise HTTPException(status_code=500, detail=str(e))
