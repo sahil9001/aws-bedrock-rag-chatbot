@@ -6,6 +6,13 @@ A modern **AWS Bedrock-based** Retrieval-Augmented Generation (RAG) web applicat
 
 ![Architecture Diagram](architecture/image.png)
 
+### 🎥 Demo Video
+Watch the application in action:
+
+https://github.com/user-attachments/assets/your-video-id
+
+*Note: The demo video is also available in the `architecture/` folder as `open-source-rag-chatbot-1756584527454.mp4`*
+
 This application leverages **AWS Bedrock** services to provide two distinct AI interaction modes:
 
 - **Knowledge Base Mode**: Uses AWS Bedrock Knowledge Base with retrieval-augmented generation for document-specific queries
@@ -104,7 +111,14 @@ Queries the AWS Bedrock Knowledge Base for document-specific information.
 
 **Example:**
 ```
-http://127.0.0.1:8000/bedrock/query?text=what%20information%20is%20available%20in%20the%20documents?
+http://127.0.0.1:8000/bedrock/query?text=what%20are%20Warren%20Buffett%27s%20main%20investment%20principles?
+```
+
+**More Warren Buffett RAG Examples:**
+```
+http://127.0.0.1:8000/bedrock/query?text=what%20is%20the%20margin%20of%20safety%20concept?
+http://127.0.0.1:8000/bedrock/query?text=how%20does%20Buffett%20evaluate%20management%20quality?
+http://127.0.0.1:8000/bedrock/query?text=what%20are%20the%20business%20tenets%20for%20investing?
 ```
 
 ### Direct Model Invocation
@@ -126,7 +140,8 @@ aws-bedrock-rag-webapp/
 ├── web_app.py           # Full web application with UI
 ├── requirements.txt     # Python dependencies
 ├── architecture/
-│   └── image.png       # Architecture diagram
+│   ├── image.png       # Architecture diagram
+│   └── open-source-rag-chatbot-1756584527454.mp4  # Demo video
 ├── templates/
 │   └── index.html      # Main web interface
 ├── static/
@@ -160,7 +175,13 @@ aws-bedrock-rag-webapp/
 - **Document Analysis**: Intelligent querying of document collections
 - **Interactive Documentation**: Query documentation through natural language
 - **Knowledge Management**: AI-powered information retrieval from knowledge bases
+- **Investment Research**: Query investment strategies and principles (demo includes Warren Buffett's investment philosophy)
 - **General AI Chat**: Use for broader technical discussions and assistance
+
+### 📚 Sample Knowledge Base
+This demo includes **"The Warren Buffett Way"** by Robert G. Hagstrom as the sample document for testing RAG capabilities. The knowledge base contains Warren Buffett's investment strategies, business principles, and financial wisdom.
+
+**Source Document**: [The Warren Buffett Way PDF](https://www.idbidirect.in/idbiadmin/pdf/The-Warren-Buffett-Way.pdf)
 
 ## 🔍 Features Deep Dive
 
